@@ -9,8 +9,7 @@ import random
 from random import randint
 from sys import exit
 
-global TIMES
-TIMES = 0
+
 first_award = "一等奖"
 second_award = "二等奖"
 third_award = "三等奖"
@@ -31,7 +30,7 @@ def user_data():
     user_id = raw_input("用户名：")
     if user_id in user_list:
         print "身份验证成功"
-        return choujiang_times()
+        return user_input()
     elif user_id in black_user_list:
         print "非法用户,已加入黑名单,赶紧来自首"
         user_data()
@@ -39,11 +38,7 @@ def user_data():
         print "用户不存在"
         return user_data()
 
-def choujiang_times():
-    global  TIMES
-    print "你今天还可以抽奖%d次." % (3-TIMES)
-    TIMES = TIMES + 1
-    return TIMES
+
 
 def choujiang():
     get_num = random.randint(1,100)
@@ -77,14 +72,5 @@ def user_input():
 
 
 
-
-def start_pro():
-    global  TIMES
-    if TIMES <= 3:
-        return user_input()
-
-    else:
-        print "今天的抽奖用完了！"
-        exit()
 
 start_words()
