@@ -88,3 +88,39 @@ def start_pro():
         exit()
 
 start_words()
+
+
+
+# 用户数据类
+class user_data:
+    def __init__(self,user_id,user_name,user_pwd,draw_times):
+        self.name = user_name
+        self.id = user_id
+        self.password = user_pwd
+        self.times = draw_times
+
+
+user000001 = user_data(00001,Jolin,1234,3)
+user000002 = user_data(00002,Jay,1234,3)
+user000003 = user_data(00003,Cedric,12345,5)
+user_list = [user000001,user000002,user000003]
+    def draw_per_day():
+
+        if
+
+
+# 用户确认身份
+def confirm_user():
+    user_id = user_data.id
+    user_id_input = raw_input("用户名：")
+
+
+    if user_id_input in user_data.name and user_data.password is True:
+        print "%s 你好,欢迎抽奖" % user_data.name
+        return choujiang_times()
+    elif user_id in black_user_list:
+        print "非法用户,已加入黑名单,赶紧来自首"
+        user_data()
+    else:
+        print "用户不存在"
+        return user_data()
