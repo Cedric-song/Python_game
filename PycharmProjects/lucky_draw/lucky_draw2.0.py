@@ -50,7 +50,7 @@ def choujiang_times():
         print "今天的抽奖用完了."
         exit(0)
     TIMES = TIMES + 1
-    return user_input()
+    user_input()
 
 
 def choujiang():
